@@ -13,7 +13,7 @@ type Props = {
   };
 };
 
-export const revalidate = 0; // SSR
+export const revalidate = 60; // ISR
 
 export default async function Page({params, searchParams}: Props) {
   const data = await getNewsDetail(params.slug, {
