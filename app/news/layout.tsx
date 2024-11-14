@@ -5,7 +5,9 @@ type Props = {
   children: React.ReactNode;
 };
 
-export default function NewsLayout({ children }: Props) {
+export const revalidate = 60; // ISR
+
+export default function NewsLayout({children}: Props) {
   return (
     <>
       <Hero title="News" sub="ニュース" />
